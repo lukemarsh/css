@@ -1,0 +1,22 @@
+{
+  "name": "@lukes-design-system/css",
+  "version": "0.0.1",
+  "description": "Luke's Design system is a CSS framework",
+  "style": "dist/lukes-design-system.css",
+  "sass": "index.scss",
+  "main": "dist/lukes-design-system.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cd docs && npm install && npm run develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukemarsh/css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukemarsh/css/issues"
+  },
+  "homepage": "https://github.com/lukemarsh/css#readme"
+}

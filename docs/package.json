@@ -1,0 +1,16 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "develop": "ln -sf ../dist . && gatsby develop -H 0.0.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.19.22",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-remark": "^2.6.53",
+    "react-dom": "^16.12.0"
+  }
+}
