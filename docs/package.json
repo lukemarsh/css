@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "develop": "ln -sf ../dist . && gatsby develop -H 0.0.0.0"
+    "develop": "ln -sf ../dist . && gatsby develop -H 0.0.0.0",
+    "build-content": "gatsby build --prefix-paths",
+    "build": "./script/now-build.sh"
   },
   "author": "",
   "license": "ISC",

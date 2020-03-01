@@ -29,8 +29,6 @@
 
   // Adds a blue vertical line to the left of the row
   // For indicating a row item is unread
-  &.Box-row--unread,
-  // .unread to be deprecated with .Box-row-unread
   &.unread {
     // stylelint-disable-next-line primer/box-shadow
     box-shadow: 2px 0 0 $blue inset;
