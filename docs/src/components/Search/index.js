@@ -71,7 +71,6 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
           // by setting it to always be `null`.
           selectedItem={null}
           onSelect={item => {
-            console.log(item);
             if (item) {
               navigate(item.path)
               setQuery('')
@@ -97,7 +96,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
                       {indices.map(({ name, title, hitComp }) => (
                         <Index key={name} indexName={name}>
                           <Results>
-                            <Hits hitComponent={hitComps[hitComp](() => setFocus(false), 'hello')} />
+                            <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
                           </Results>
                         </Index>
                       ))}

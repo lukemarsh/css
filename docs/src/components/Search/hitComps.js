@@ -4,7 +4,6 @@ import { Highlight, Snippet } from "react-instantsearch-dom"
 import { navigate } from "gatsby"
 
 export const PageHit = clickHandler => (props) => {
-  console.log(props);
   return (
     <div onClick={() => navigate(props.hit.path)} className={classnames("px-3 py-2 Box-row Box-row--hover-blue")}>
       <h4>
