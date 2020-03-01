@@ -13,3 +13,6 @@ docs/dist
 node_modules/
 public/
 searchIndex.js
+
+.now
+.env

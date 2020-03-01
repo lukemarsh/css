@@ -9,7 +9,7 @@ import {navigate} from 'gatsby'
 import algoliasearch from "algoliasearch/lite"
 import Downshift from 'downshift'
 
-import Input from "./Input"
+import Input from "./input"
 import * as hitComps from "./hitComps"
 
 import "./Search.scss";
