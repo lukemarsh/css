@@ -33,6 +33,8 @@
     "postcss-load-config": "^2.1.0",
     "postcss-node-sass": "^2.1.8",
     "postcss-scss": "^2.0.0",
-    "stylelint": "^13.2.0"
+    "stylelint": "^13.2.0",
+    "stylelint-config-primer": "^9.0.0",
+    "stylelint-scss": "^3.14.2"
   }
 }
