@@ -22,17 +22,16 @@ const Sidenav = ({result}) => {
           <div className="border-right height-full overflow-auto">
           <StaticQuery
             query={graphql`
-              query {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                  limit: 1000
-                ) {
-                  edges {
-                    node {
-                      frontmatter {
-                        path
-                        title
-                        show_in_nav
+              query SiteQuery {
+                site {
+                  siteMetadata {
+                    title
+                    menuLinks {
+                      name
+                      link
+                      children {
+                        name
+                        link
                       }
                     }
                   }
@@ -40,13 +39,42 @@ const Sidenav = ({result}) => {
               }
             `}
             render={data => {
-              const { allMarkdownRemark } = data // data.markdownRemark holds your post data
-              const { edges } = allMarkdownRemark
+              const { site } = data
+              const { siteMetadata } = site
+              const { menuLinks } = siteMetadata;
               return (
-                <div className="p-4">
-                  {edges.map(({ node }) => {
-                    const { frontmatter } = node;
-                    return <div key={frontmatter.title} className="mt-2"><Link className="pt-1 pb-1 mt-2 d-block" to={frontmatter.path}>{frontmatter.title}</Link></div>
+                <div>
+                  {menuLinks.map((link, index) => {
+                    return (
+                      <div className={classnames("p-4", {
+                        "border-top": index !== 0
+                      })}>
+                        <div key={link.name} className="mt-2">
+                          <Link
+                            className="d-block h4 text-gray-dark"
+                            to={link.link}
+                            activeClassName="text-gray-dark text-bold"
+                            partiallyActive={true}
+                          >
+                            {link.name}
+                          </Link>
+                          { link.children && 
+                          <div className="mt-2 d-flex flex-column">
+                            {link.children.map((child) => (
+                              <Link
+                                className="pt-1 pb-1 mt-2 d-block h5"
+                                to={child.link}
+                                activeClassName="text-gray-dark text-bold"
+                                partiallyActive={true}
+                              >
+                                {child.name}
+                              </Link>
+                            ))}
+                          </div>
+                          }
+                        </div>
+                      </div>
+                    )
                   })}
                 </div>
               )

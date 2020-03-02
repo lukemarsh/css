@@ -1,10 +1,10 @@
 ---
-path: "/content/index"
+path: "/content/nested"
 date: "2019-05-04"
-title: Primer CSS
+title: "Nested Example"
 ---
 
-## Hello
+## Hello Nested
 
 Some text here
 

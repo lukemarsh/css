@@ -5,7 +5,7 @@ export default connectSearchBox(({ refine, onFocus }) => {
   return (
     <form>
       <input
-        className="form-control"
+        className="form-control input-dark"
         type="text"
         placeholder="Search"
         aria-label="Search"

@@ -2,7 +2,6 @@
 path: "/content/getting-started"
 date: "2019-05-04"
 title: "Getting Started"
-show_in_nav: true
 ---
 
 Primer CSS is [open-sourced on GitHub](https://github.com/primer/css) and [available on npm](https://www.npmjs.com/package/@primer/css).

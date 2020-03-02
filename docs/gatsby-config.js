@@ -4,6 +4,39 @@ require("dotenv").config()
 
 module.exports = {
   pathPrefix: '/css',
+  siteMetadata: {
+    title: 'Gatsby Default Starter',
+    menuLinks:[
+      {
+        name:'Getting Started',
+        link:'/content/getting-started'
+      },
+      {
+        name:'Support',
+        link:'/content/support',
+        children: [
+          {
+            name: 'Breakpoints',
+            link: '/content/support/breakpoints'
+          },
+          {
+            name: 'Colour system',
+            link: '/content/support/colour-system'
+          }
+        ]
+      },
+      {
+        name:'Nested',
+        link:'/content/nested',
+        children: [
+          {
+            name: 'Nested Example',
+            link: '/content/nested/example'
+          }
+        ]
+      },
+    ]
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-algolia`,

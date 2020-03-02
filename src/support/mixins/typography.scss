@@ -2,3 +2,13 @@
   font-size: $h1-size;
   font-weight: $font-weight-bold;
 }
+
+@mixin h4 {
+  font-size: $h4-size;
+  font-weight: $font-weight-bold;
+}
+
+@mixin h5 {
+  font-size: $h5-size;
+  font-weight: $font-weight-bold;
+}
